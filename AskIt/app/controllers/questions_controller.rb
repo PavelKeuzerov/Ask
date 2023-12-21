@@ -3,6 +3,4 @@ class QuestionsController < ApplicationController
     @questions = Question.all
   end
 
-  def destroy
-  end
 end
