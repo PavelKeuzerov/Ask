@@ -1,15 +1,15 @@
+# frozen_string_literal: true
+
 class QuestionsController < ApplicationController
+  def index
+    @questions = Question.all
+  end
+
+  def new
+    @question = Question.new
+  end
+
   def show
-    @question = Question.find_by id: params[:id]
-  end
-
-  def destroy
-    @question = Question.find_by id: params[:id]
-    @question.destroy
-    redirect_to questions_path
-  end
-
-  def edit
     @question = Question.find_by id: params[:id]
   end
 
@@ -22,12 +22,8 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def index
-    @questions = Question.all
-  end
-
-  def new
-    @question = Question.new
+  def edit
+    @question = Question.find_by id: params[:id]
   end
 
   def create
@@ -37,6 +33,12 @@ class QuestionsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @question = Question.find_by id: params[:id]
+    @question.destroy
+    redirect_to questions_path
   end
 
   private
