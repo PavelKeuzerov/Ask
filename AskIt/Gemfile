@@ -68,7 +68,11 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'bootstrap'
+  gem 'bootstrap-sass'
+  gem 'sass-rails'
+  gem 'jquery-rails'
   gem 'capybara'
+  gem 'cssbundling-rails'
+  gem 'jsbundling-rails'
   gem 'selenium-webdriver'
 end

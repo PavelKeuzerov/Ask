@@ -1,0 +1,8 @@
+{
+  "name": "some-application-name",
+  "author": "Keet Sugathadasa",
+  "email": "email",
+  "license": "MIT",
+  "version": "0.0.1",
+  "private": true
+}
